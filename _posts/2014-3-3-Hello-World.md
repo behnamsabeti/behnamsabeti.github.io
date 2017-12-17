@@ -1,10 +1,15 @@
 ---
 layout: post
-title: You're up and running!
+title: Simple Reinforcement Learning to Solve Cartpole
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+the code is:
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
-
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+```python
+action = agent.act(state)
+next_state, reward, done, _ = env.step(action)
+reward = reward if not done else -10
+next_state = np.reshape(next_state, [1, state_size])
+agent.remember(state, action, reward, next_state, done)
+state = next_state
+```
