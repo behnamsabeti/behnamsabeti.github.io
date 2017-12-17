@@ -16,4 +16,8 @@ for _ in action:
 	env.act(_)
 ```
 
+<pre><code>
+action = env.act(action)
+</code></pre>
+
 it was a test post!
