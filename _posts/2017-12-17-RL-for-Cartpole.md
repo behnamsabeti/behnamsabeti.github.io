@@ -18,5 +18,8 @@ title: Convert Documents to Vectors using an Auto-Encoder and build a Sentiment 
 <li>Decoder: this network tries to transform samples from latent space back into their original representation</li>
 </ul>
 <p style="text-align: justify;"><img src="https://github.com/behnamsabeti/behnamsabeti.github.io/blob/master/images/post_0/ae.jpg" alt="Auto-Encoder Architecture" /></p>
+
+![Auto-Encoder Architecture]({{/images/post_0/ae.jpg" | absolute_url }})
+
 <p style="text-align: justify;">Auto-Encoder is a kind of compression algorithm, because it transforms each sample into a, usually lower dimension, latent space which contains all the information for decoder to decode it and construct the original sample. After training the Auto-Encoder on a large enough dataset, the model can be used to transform any sample to the latent space, which is our desired fixed-legnth vector.</p>
 	
