@@ -17,7 +17,7 @@ title: Convert Documents to Vectors using an Auto-Encoder and build a Sentiment 
 <li>Encoder: this network tries to trasnform input samples to a latent space</li>
 <li>Decoder: this network tries to transform samples from latent space back into their original representation</li>
 </ul>
-<p style="text-align: justify;"><img src="https://github.com/behnamsabeti/behnamsabeti.github.io/blob/master/images/post_0/ae.jpg" alt="Auto-Encoder Architecture" /></p>
+<p style="text-align: justify;"><img src="https://raw.githubusercontent.com/behnamsabeti/behnamsabeti.github.io/master/images/post_0/ae.jpg" alt="Auto-Encoder Architecture" /></p>
 
 ![Auto-Encoder Architecture]({{/images/post_0/ae.jpg" | absolute_url }})
 
