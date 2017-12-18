@@ -9,5 +9,5 @@ Behnam Sabeti
 
 ### Contact me
 
-[behnamsabeti@gmail.com](mailto:behnamsabeti@gmail.com)
+[behnamsabeti@gmail.com](mailto:behnamsabeti@gmail.com)<br>
 [sabeti@ce.sharif.edu](mailto:sabeti@ce.sharif.edu)
