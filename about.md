@@ -5,9 +5,7 @@ permalink: /about/
 ---
 
 Behnam Sabeti
-PhD. Candidate at Sharif University of Technology
-Data Developer at Miras Technologies International
-
+<ul><li>PhD. Candidate at <a href="http://www.sharif.ir" target="_blank" rel="noopener">Sharif University of Technology</a></li><li>Data Developer at <a href="http://www.miras-tech.com" target="_blank" rel="noopener">Miras Technologies International</a></li></ul>
 
 ### Contact me
 
