@@ -19,6 +19,8 @@ Auto-Encoder consists of two parts: encoder and decoder. Each part is an arbitra
 	-- Encoder: this network tries to trasnform input samples to a latent space
 	-- Decoder: this network tries to transform samples from latent space back into their original representation
 
+![alt text](https://github.com/behnamsabeti/behnamsabeti.github.io/blob/master/images/post_0/ae.jpg "Auto-Encoder Architecture")
+
 Auto-Encoder is a kind of compression algorithm, because it transforms each sample into a, usually lower dimension, latent space which contains all the information for decoder to decode it and construct the original sample. After training the Auto-Encoder on a large enough dataset, the model can be used to transform any sample to the latent space, which is our desired fixed-legnth vector.
 
 	
