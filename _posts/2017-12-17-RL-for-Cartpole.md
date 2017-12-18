@@ -11,12 +11,9 @@ If you're not familiar with any of these concepts, don't worry! I will try to ex
 Ok first things first, what is an auto-encoder?
 Auto-Encoder consists of two parts: encoder and decoder. Each part is an arbitrary neural network:
 
-	<ul>
-		<li>Encoder: this network tries to trasnform input samples to a latent space</li>
-		<li>Decoder: this network tries to transform samples from latent space back into their original representation</li>
-	</ul>
+<ul><li>Encoder: this network tries to trasnform input samples to a latent space</li><li>Decoder: this network tries to transform samples from latent space back into their original representation</li></ul>
 
-![alt text](ae.jpg "Auto-Encoder Architecture")
+![N|Solid](ae.jpg)
 
 Auto-Encoder is a kind of compression algorithm, because it transforms each sample into a, usually lower dimension, latent space which contains all the information for decoder to decode it and construct the original sample. After training the Auto-Encoder on a large enough dataset, the model can be used to transform any sample to the latent space, which is our desired fixed-legnth vector.
 
