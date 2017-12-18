@@ -1,34 +1,24 @@
 ---
 layout: post
-title: Simple Reinforcement Learning to Solve Cartpole
+title: Convert Documents to Vectors using an Auto-Encoder and build a Sentiment Analysis model
 ---
 
-the code is:
+Auto-Encoder is a neural network architecture, which tries to extract features from data samples. In this post, we will use this concept to convert a set of documents to fixed-length vectors. These vectors can then be used for any classification or clustering tasks. This post will cover the following:
 
-```python
-action = agent.act(state)
-state = next_state
-```
-next you can do:
+	-- what is an auto-encoder?
+	-- implement an auto-encoder with two LSTM networks
+	-- train the networks on amazon data
+	-- use the generated vectors to build a sentiment analysis model
+	-- evaluate the generated model
 
-```
-for _ in action:
-	env.act(_)
-```
+If you're not familiar with any of these concepts, don't worry! I will try to explain every thing from scratch.
 
-```python
-model = Sequential()
-        model.add(Dense(24, input_dim=self.state_size, activation='relu'))
-        model.add(Dense(24, activation='relu'))
-        model.add(Dense(self.action_size, activation='linear'))
-        model.compile(loss='mse',
-                      optimizer=Adam(lr=self.learning_rate))
-```
+Ok first things first, what is an auto-encoder?
+Auto-Encoder consists of two parts: encoder and decoder. Each part is an arbitrary neural network:
 
-<pre><code>
-action = env.act(action)
-</code></pre>
+	-- Encoder: this network tries to trasnform input samples to a latent space
+	-- Decoder: this network tries to transform samples from latent space back into their original representation
 
-<script src="https://gist.github.com/behnamsabeti/f89ec3d94a12fd4a7f8ddeeeb95e75ea.js"></script>
+Auto-Encoder is a kind of compression algorithm, because it transforms each sample into a, usually lower dimension, latent space which contains all the information for decoder to decode it and construct the original sample. After training the Auto-Encoder on a large enough dataset, the model can be used to transform any sample to the latent space, which is our desired fixed-legnth vector.
 
-it was a test post!
+	
