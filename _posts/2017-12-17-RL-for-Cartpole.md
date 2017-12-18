@@ -4,14 +4,7 @@ title: Convert Documents to Vectors using an Auto-Encoder and build a Sentiment 
 ---
 
 Auto-Encoder is a neural network architecture, which tries to extract features from data samples. In this post, we will use this concept to convert a set of documents to fixed-length vectors. These vectors can then be used for any classification or clustering tasks. This post will cover the following:
-
-	<ul>
-  		<li>what is an auto-encoder?</li>
-  		<li>implement an auto-encoder with two LSTM networks</li>
-  		<li>train the networks on amazon data</li>
-  		<li>use the generated vectors to build a sentiment analysis model</li>
-  		<li>evaluate the generated model</li>
-	</ul>
+<ul><li>what is an auto-encoder?</li><li>implement an auto-encoder with two LSTM networks</li><li>train the networks on amazon data</li><li>use the generated vectors to build a sentiment analysis model</li><li>evaluate the generated model</li></ul>
 
 If you're not familiar with any of these concepts, don't worry! I will try to explain every thing from scratch.
 
