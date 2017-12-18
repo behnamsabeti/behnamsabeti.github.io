@@ -22,5 +22,10 @@ title: Documents to Vectors using an Auto-Encoder
 
 <p style="text-align: justify;">Auto-Encoder is a kind of compression algorithm, because it transforms each sample into a, usually lower dimension, latent space which contains all the information for decoder to decode it and construct the original sample. After training the Auto-Encoder on a large enough dataset, the model can be used to transform any sample to the latent space, which is our desired fixed-legnth vector.</p>
 
+<p>The following code builds our model:</p>
 <script src="https://gist.github.com/behnamsabeti/001f38927628d6cdc65eaa7f7df6e116.js"></script>
-	
+<p>Model parameters are:</p>
+<script src="https://gist.github.com/behnamsabeti/b4ea7fa51383050287c0d3854fe51fd4.js"></script>
+<p>And finally the following code trains the model and saves the best one:</p>
+<script src="https://gist.github.com/behnamsabeti/13c438761ef6ce862e818eb8d8c20a97.js"></script>
+
