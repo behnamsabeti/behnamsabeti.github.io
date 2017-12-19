@@ -18,7 +18,6 @@ title: Documents to Vectors using an Auto-Encoder
 </ul>
 
 ![alt text]({{ site.baseurl }}/images/post_0/ae.jpg "Auto-Encoder Architecture")
-<strong><div style="text-align: justify"> Auto-Encoder Architecture</div></strong>
 
 <p style="text-align: justify;">Auto-Encoder is a kind of compression algorithm, because it transforms each sample into a, usually lower dimension, latent space which contains all the information for decoder to decode it and construct the original sample. After training the Auto-Encoder on a large enough dataset, the model can be used to transform any sample to the latent space, which is our desired fixed-legnth vector.</p>
 
@@ -26,12 +25,13 @@ title: Documents to Vectors using an Auto-Encoder
 <p style="text-align: justify;">Long Short Term Memory or LSTM is a neural network which tries to model sequences. This model takes into account long dependencies between elements in a sequence, and avoids problems like gradient vanishing in vanilla RNNs.&nbsp;There is a great blog <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">post</a> by <a href="http://colah.github.io/about.html">Christopher Olah</a> on LSTM, if you want to know the details. We will use two LSTM networks as the encoder and decoder parts of our Auto-Encoder.</p>
 
 ![alt text]({{ site.baseurl }}/images/post_0/lstm.jpg "LSTM Architecture")
-<strong><div style="text-align: justify"> Long Short Term Memory (LSTM) Architecture</div></strong>
 
 <p><strong>Fixed-length documents</strong></p>
 <p style="text-align: justify;">In order to feed documents to the auto-encoder, we need to specify a fixed-length for the sequences. This way each input will have a specific size. To this end we will use padding elements, which will be used to increse length for documents which have a lower length than the sepecifeid one. Documents with higher length will be cut-off to match the desired length.</p>
+<script src="https://gist.github.com/behnamsabeti/489d0421fcdcc1d325a5bf0c9aedd8e9.js"></script>
 <p><strong>Data Preparation</strong></p>
 <p style="text-align: justify;">We need to have a machanism to encode words as vectors, because computer does not understand a String! Word embedding is the way to do that. There are some models like <a href="https://arxiv.org/abs/1301.3781">word2vec</a> and <a href="https://nlp.stanford.edu/projects/glove/">GloVec</a> which are pre-trained on huge corpora and can be used to generate a fixed-length vector for each word. We will use GloVec model to transform each word to a vector. These vactors are then concatenated together to form a 2D vector for each document. All documents are converted to these 2D vectors and form our training data. After training we will have a 1D vector representation for each document which is generated with respect to all other documents and, hopefully, encodes semantics. The code for loading and using GloVec model is:</p>
+<script src="https://gist.github.com/behnamsabeti/a45437aa479ccacfc70af18b9def872b.js"></script>
 <p><strong>Model</strong></p>
 <p style="text-align: justify;">I used Keras Library with Tensorflow backend for implementation. Keras makes it really easy to create deep learning models. The following code generates an Auto-Encoder with 2 LSTM networks.</p>
 <script src="https://gist.github.com/behnamsabeti/001f38927628d6cdc65eaa7f7df6e116.js"></script>
@@ -44,7 +44,7 @@ src="https://gist.github.com/behnamsabeti/b4ea7fa51383050287c0d3854fe51fd4.js"><
 <p><strong>Using the Model</strong></p>
 <p style="text-align: justify;">All we did to this point was to create a model which can convert each document to a fixed-length vector, and we have that now! All you need to do is to convert your document to a 2D vector using the same code for data preparation and feed it to the trained model. After that you get the middle weights and walah you have the vectorized representation of your documents. The following code shows how to do this:</p>
 <p><strong>Conclusion</strong></p>
-<p style="text-align: justify;">In this post we used an Auto-Encoder architectue with 2 LSTM networks as encoder and decoder in order to convert documents to fixed-length vectors. This tool will come handy when you have a text classification or clustering task. You can use this instead of what we call feature engineering and feature extraction which are exhastive tasks themselves. In the next post i will show you how to build a fairly accurate sentiment analysis model based on this post. The Code for this post is available in github, which is fully commented. If you have any comments or questions just drop a comment and we will learn more together.&nbsp;</p>
+<p style="text-align: justify;">In this post we used an Auto-Encoder architectue with 2 LSTM networks as encoder and decoder in order to convert documents to fixed-length vectors. This tool will come handy when you have a text classification or clustering task. You can use this instead of what we call feature engineering and feature extraction which are exhastive tasks themselves. In the next post i will show you how to build a fairly accurate sentiment analysis model based on this post. The Code for this post is available in <a href="https://github.com/behnamsabeti/LSTM_autoencoder">github</a>, which is fully commented. If you have any comments or questions just drop a comment and we will learn more together.&nbsp;</p>
 <p>&nbsp;</p>
 
 
