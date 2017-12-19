@@ -43,6 +43,7 @@ src="https://gist.github.com/behnamsabeti/b4ea7fa51383050287c0d3854fe51fd4.js"><
 <script src="https://gist.github.com/behnamsabeti/13c438761ef6ce862e818eb8d8c20a97.js"></script>
 <p><strong>Using the Model</strong></p>
 <p style="text-align: justify;">All we did to this point was to create a model which can convert each document to a fixed-length vector, and we have that now! All you need to do is to convert your document to a 2D vector using the same code for data preparation and feed it to the trained model. After that you get the middle weights and walah you have the vectorized representation of your documents. The following code shows how to do this:</p>
+<script src="https://gist.github.com/behnamsabeti/48d635c2d2410380c64fe3e3b4324e90.js"></script>
 <p><strong>Conclusion</strong></p>
 <p style="text-align: justify;">In this post we used an Auto-Encoder architectue with 2 LSTM networks as encoder and decoder in order to convert documents to fixed-length vectors. This tool will come handy when you have a text classification or clustering task. You can use this instead of what we call feature engineering and feature extraction which are exhastive tasks themselves. In the next post i will show you how to build a fairly accurate sentiment analysis model based on this post. The Code for this post is available in <a href="https://github.com/behnamsabeti/LSTM_autoencoder">github</a>, which is fully commented. If you have any comments or questions just drop a comment and we will learn more together.&nbsp;</p>
 <p>&nbsp;</p>
